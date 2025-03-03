@@ -28,14 +28,15 @@ jobs:
 
     - name: Increment patch version
       run: |
-        # Split version into major, minor, patch parts
         IFS='.' read -r major minor patch <<< "$VERSION"
         patch=$((patch + 1))
         NEW_VERSION="$major.$minor.$patch"
         echo "New version is $NEW_VERSION"
+        echo "NEW_VERSION=$NEW_VERSION" >> $GITHUB_ENV
 
     - name: Update version in build.gradle.kts
       run: |
+        echo "Updating version to $NEW_VERSION"
         sed -i "s/version = \"$VERSION\"/version = \"$NEW_VERSION\"/" build.gradle.kts
         echo "Version updated to $NEW_VERSION in build.gradle.kts"
 
