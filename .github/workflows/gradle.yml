@@ -42,3 +42,9 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build
+
+    - name: Check files if Exist
+      run: |
+        cd /build/libs
+        ls
+
