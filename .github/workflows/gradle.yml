@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - "master"
+  workflow_dispatch:
 
 jobs:
   build:
@@ -48,7 +49,7 @@ jobs:
         git config user.name "ben"
         git config user.email "ben@github.com"
         git add build.gradle.kts
-        git commit -m "Increment patch version to $NEW_VERSION" || exit 0  # Skip commit if no changes
+        git commit -m "Increment patch version to $NEW_VERSION"
         git push
 
     - name: Check files if Exist
