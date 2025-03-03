@@ -45,6 +45,6 @@ jobs:
 
     - name: Check files if Exist
       run: |
-        cd /build/libs
+        cd build/libs
         ls
 
