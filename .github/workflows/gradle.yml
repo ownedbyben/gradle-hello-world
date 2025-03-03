@@ -45,6 +45,7 @@ jobs:
 
     - name: Check files if Exist
       run: |
+        echo "test"
         cd build/libs
         ls
 
