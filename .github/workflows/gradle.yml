@@ -52,6 +52,13 @@ jobs:
         git commit -m "Increment patch version to $NEW_VERSION"
         git push
 
+    - name: upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: hello-world-jar
+        path: build/libs/*.jar
+
+
     - name: Check files if Exist
       run: |
         cd build/libs
