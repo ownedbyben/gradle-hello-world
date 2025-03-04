@@ -16,7 +16,7 @@ description = "HelloWorld"
 version = "1.0.19"
 
 
-//application.mainClass.set("com.ido.HelloWorld")
+application.mainClass.set("com.ido.HelloWorld")
 
 tasks.withType<Jar> {
     manifest {
