@@ -75,6 +75,11 @@ jobs:
         docker push ownedbyben/hello-world:$NEW_VERSION
         docker push ownedbyben/hello-world:latest
 
+    - name: Pull and run Docker image
+      run: |
+        docker pull ownedbyben/hello-world:$NEW_VERSION
+        docker run --rm ownedbyben/hello-world:$NEW_VERSION whoami
+
     - name: Check files if Exist
       run: |
         cd build/libs
