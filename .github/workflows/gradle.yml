@@ -83,7 +83,7 @@ jobs:
     - name: Pull and run Docker image and check user
       run: |
         docker pull ownedbyben/hello-world:$NEW_VERSION
-        docker run -d --name hello-world-container ownedbyben/hello-world:$NEW_VERSION
+        docker run -d --name hello-world-container ownedbyben/hello-world:$NEW_VERSION tail -f /dev/null
         sleep 5
         docker exec hello-world-container whoami
         docker stop hello-world-container
