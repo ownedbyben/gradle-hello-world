@@ -17,6 +17,12 @@ version = "1.0.13"
 
 application.mainClass.set("com.ido.HelloWorld")
 
+tasks.withType<Jar> {
+    manifest {
+        attributes["Main-Class"] = "com.ido.HelloWorld"
+    }
+}
+
 repositories {
     mavenCentral()
 }
