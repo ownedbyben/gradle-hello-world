@@ -75,13 +75,17 @@ jobs:
         docker push ownedbyben/hello-world:$NEW_VERSION
         docker push ownedbyben/hello-world:latest
 
-    - name: Pull and run Docker image
+    #- name: Pull and run Docker image
+    #  run: |
+    #    docker pull ownedbyben/hello-world:$NEW_VERSION
+    #    docker run --rm ownedbyben/hello-world:$NEW_VERSION whoami
+
+    - name: Pull and run Docker image and check user
       run: |
         docker pull ownedbyben/hello-world:$NEW_VERSION
-        docker run --rm ownedbyben/hello-world:$NEW_VERSION whoami
-
-    - name: Check files if Exist
-      run: |
-        cd build/libs
-        ls -ltr
+        docker run -d --name hello-world-container ownedbyben/hello-world:$NEW_VERSION
+        sleep 5
+        docker exec hello-world-container whoami
+        docker stop hello-world-container
+        docker rm hello-world-container
 
