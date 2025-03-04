@@ -78,5 +78,5 @@ jobs:
     - name: Check files if Exist
       run: |
         cd build/libs
-        ls
+        ls -ltr
 
