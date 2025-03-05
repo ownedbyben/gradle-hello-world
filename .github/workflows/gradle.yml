@@ -18,8 +18,8 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: set up Gradle
-      uses: gradle/actions/setup-gradle@v4
+    # - name: set up Gradle
+    #   uses: gradle/actions/setup-gradle@v4
 
     - name: Get current version
       run: |
@@ -41,8 +41,8 @@ jobs:
         sed -i "s/version = \"$VERSION\"/version = \"$NEW_VERSION\"/" build.gradle.kts
         echo "Version updated to $NEW_VERSION in build.gradle.kts"
 
-    - name: Build with Gradle
-      run: ./gradlew build
+    # - name: Build with Gradle
+    #   run: ./gradlew build
 
     - name: Commit and push the updated version
       run: |
