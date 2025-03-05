@@ -5,7 +5,7 @@ COPY . /source/
 RUN ./gradlew shadowJar
 
 
-FROM openjdk:11-jre-slim
+FROM openjdk:17-oraclelinux
 WORKDIR /app
 
 COPY --from=builder /source/build/libs/*.jar /app/app.jar
