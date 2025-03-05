@@ -1,4 +1,4 @@
-name: Java CI with Gradle
+name: MULTI-STAGE Java CI with Gradle
 
 on:
   push:
