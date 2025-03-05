@@ -5,6 +5,6 @@ WORKDIR /app
 COPY build/libs/*.jar app.jar
 
 RUN useradd -m ben
-USER ben
+USER benn
 
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
