@@ -1,4 +1,3 @@
-#java lightweight image
 FROM openjdk:17-jdk-slim
 WORKDIR /app
 
