@@ -59,7 +59,9 @@ jobs:
 
     - name: Push Docker image
       run: |
+        docker push ownedbyben/stage-app:$NEW_VERSION
         docker push ownedbyben/stage-app:latest
+
 
     - name: Pull and run Docker image
       run: |
