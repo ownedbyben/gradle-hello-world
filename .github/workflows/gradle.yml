@@ -18,9 +18,6 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    # - name: set up Gradle
-    #   uses: gradle/actions/setup-gradle@v4
-
     - name: Get current version
       run: |
         VERSION=$(grep 'version = "' build.gradle.kts | cut -d '"' -f2)
@@ -41,9 +38,6 @@ jobs:
         sed -i "s/version = \"$VERSION\"/version = \"$NEW_VERSION\"/" build.gradle.kts
         echo "Version updated to $NEW_VERSION in build.gradle.kts"
 
-    # - name: Build with Gradle
-    #   run: ./gradlew build
-
     - name: Commit and push the updated version
       run: |
         git config user.name "ben"
@@ -52,13 +46,7 @@ jobs:
         git commit -m "Increment patch version to $NEW_VERSION"
         git push
 
-    - name: upload artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: hello-world-jar
-        path: build/libs/*.jar
-
-    - name: Build Docker image
+    - name: Build Docker image using Multistage
       run: |
         docker build -t ownedbyben/hello-world:$NEW_VERSION .
         docker tag ownedbyben/hello-world:$NEW_VERSION ownedbyben/hello-world:latest
