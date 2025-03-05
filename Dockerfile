@@ -5,12 +5,13 @@ COPY . /source/
 RUN ./gradlew shadowJar
 
 
-FROM openjdk:17-jdk-slim
+
+FROM openjdk:17-alpine
 WORKDIR /app
 
 COPY --from=builder /source/build/libs/*.jar /app/app.jar
 
-RUN useradd -m ben
+RUN useradd -D ben
 USER ben
 
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
