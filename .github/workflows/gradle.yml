@@ -25,7 +25,7 @@ jobs:
       run: |
         VERSION=$(grep 'version = "' build.gradle.kts | cut -d '"' -f2)
         echo "Current version is $VERSION"
-        echo "VERSION=$VERSION" >> $GITHUB_ENV  # Save the version for later steps
+        echo "VERSION=$VERSION" >> $GITHUB_ENV
 
     - name: Increment patch version
       run: |
@@ -63,7 +63,6 @@ jobs:
         docker build -t ownedbyben/hello-world:$NEW_VERSION .
         docker tag ownedbyben/hello-world:$NEW_VERSION ownedbyben/hello-world:latest
 
-
     - name: Log in to Docker Hub
       uses: docker/login-action@v3
       with:
@@ -79,5 +78,3 @@ jobs:
       run: |
         docker pull ownedbyben/hello-world:$NEW_VERSION
         docker run --rm ownedbyben/hello-world:$NEW_VERSION
-
-
