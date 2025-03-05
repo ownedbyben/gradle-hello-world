@@ -11,7 +11,7 @@ WORKDIR /app
 
 COPY --from=builder /source/build/libs/*.jar /app/app.jar
 
-RUN useradd -D ben
+RUN adduser -D -h /home/ben ben
 USER ben
 
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
