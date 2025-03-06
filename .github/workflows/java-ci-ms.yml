@@ -2,10 +2,6 @@ name: Java CI - Multi-stage
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - "dev"
-
 
 jobs:
   build:
