@@ -40,9 +40,9 @@ cd gradle-hello-world/
 
 ## Run the Application
 ```
-after build the project a folder "build" created.
-- *cd build/libs*
-- *ls*
-- *java -jar app-<version>-all.jar*
+after build the project a folder "build" is created.
+- cd build/libs
+- ls
+- java -jar app-<version>-all.jar
 ```
 
