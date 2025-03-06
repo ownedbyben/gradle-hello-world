@@ -17,6 +17,16 @@ The jar files located ar gradle-hello-world/build/libs/
 make the runnable jar executable then, use "java -jar gradle-hello-world-all.jar"
 ```
 
+# 📖 Overview
+This project is a Java-based application built using Gradle. It follows a CI/CD pipeline with GitHub Actions and is containerized using Docker for seamless deployment.
+
+## The project includes:
+
+~ Java (Kotlin-based) application
+~ Gradle & build process
+~ GitHub Actions for CI/CD automation
+~ Multi-stage Docker build for lightweight deployment
+
 # 🛠️ Setup Instructions
 
 ## Prerequisites
