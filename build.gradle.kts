@@ -1,5 +1,3 @@
-import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
-
 plugins {
     kotlin("jvm") version "1.6.20"
     id("application")
@@ -18,16 +16,13 @@ description = "HelloWorld"
 version = "1.0.18"
 
 
-application {
-    mainClass.set("com.ido.HelloWorld")
-}
+application.mainClass.set("com.ido.HelloWorld")
 
-tasks.withType<ShadowJar> {
-    archiveFileName.set("app.jar")
-    destinationDirectory.set(file("${buildDir}/libs"))
+tasks.withType<Jar> {
     manifest {
-        attributes("Main-Class" to "com.ido.HelloWorld")
+        attributes["Main-Class"] = "com.ido.HelloWorld"
     }
+    archiveBaseName.set("app")
 }
 
 repositories {
