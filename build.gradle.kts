@@ -22,6 +22,7 @@ tasks.withType<Jar> {
     manifest {
         attributes["Main-Class"] = "com.ido.HelloWorld"
     }
+    archiveBaseName.set("app")
 }
 
 repositories {
