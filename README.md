@@ -22,10 +22,10 @@ This project is a Java-based application built using Gradle. It follows a CI/CD 
 
 ## The project includes:
 
-~ Java (Kotlin-based) application
-~ Gradle & build process
-~ GitHub Actions for CI/CD automation
-~ Multi-stage Docker build for lightweight deployment
+~ **Java (Kotlin-based) application**
+~ **Gradle & build process**
+~ **GitHub Actions for CI/CD automation**
+~ **Multi-stage Docker build for lightweight deployment**
 
 # 🛠️ Setup Instructions
 
