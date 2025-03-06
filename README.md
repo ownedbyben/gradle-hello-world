@@ -33,20 +33,23 @@ This project is a Java-based application built using Gradle. It follows a CI/CD 
 ## Which programming language is this? 
 This project is written on java language. 
 
+
 ## What is Gradle? 
 Gradle is an open-source build automation tool for Java. It compile code, manage dependencies, run tests, and package applications efficiently. 
+
 
 ## How does Gradle work? 
 Gradle automates builds using task-based execution that reads a build script like "build.gradle.kts" that contains the instructions on how to build the project, then downloads needed libraries (dependencies) via repositories like Maven Central and then compiles the Java code into a runnable format. 
 Gradle can also create a single JAR file (a package that contains everything needed to run the app) - known as FAT JAR. 
 
+
 ## What is the Gradle Wrapper? 
 The Gradle Wrapper is a script that allows you to run Gradle without manually installing it. It automatically downloads and uses the correct Gradle version specified for the project, ensuring consistency across different environments.
 
-### The Gradle Wrapper consists of the following files: 
-**1. gradlew (Linux/macOS) & gradlew.bat (Windows) – Shell and batch scripts to run Gradle without requiring a manual installation.**
-**2. gradle/wrapper/gradle-wrapper.jar – A small Java program that downloads the specified Gradle version.** 
-**3. gradle/wrapper/gradle-wrapper.properties – Configuration file that defines the Gradle version and distribution URL (where to download Gradle from) and the distribution type (ZIP or TARBALL)**
+*The Gradle Wrapper consists of the following files:* 
+- **1. gradlew (Linux/macOS) & gradlew.bat (Windows) – Shell and batch scripts to run Gradle without requiring a manual installation.**
+- **2. gradle/wrapper/gradle-wrapper.jar – A small Java program that downloads the specified Gradle version.** 
+- **3. gradle/wrapper/gradle-wrapper.properties – Configuration file that defines the Gradle version and distribution URL (where to download Gradle from) and the distribution type (ZIP or TARBALL)**
 
 
 # 🛠️ Setup Instructions
