@@ -47,9 +47,9 @@ Gradle can also create a single JAR file (a package that contains everything nee
 The Gradle Wrapper is a script that allows you to run Gradle without manually installing it. It automatically downloads and uses the correct Gradle version specified for the project, ensuring consistency across different environments.
 
 *The Gradle Wrapper consists of the following files:* 
-- **1**. gradlew (Linux/macOS) & gradlew.bat (Windows) – Shell and batch scripts to run Gradle without requiring a manual installation.
-- **2**. gradle/wrapper/gradle-wrapper.jar – A small Java program that downloads the specified Gradle version.
-- **3**. gradle/wrapper/gradle-wrapper.properties – Configuration file that defines the Gradle version and distribution URL (where to download Gradle from) and the distribution type (ZIP or TARBALL)
+ **1**. gradlew (Linux/macOS) & gradlew.bat (Windows) – Shell and batch scripts to run Gradle without requiring a manual installation.
+ **2**. gradle/wrapper/gradle-wrapper.jar – A small Java program that downloads the specified Gradle version.
+ **3**. gradle/wrapper/gradle-wrapper.properties – Configuration file that defines the Gradle version and distribution URL (where to download Gradle from) and the distribution type (ZIP or TARBALL)
 
 # 🛠️ Setup Instructions
 
