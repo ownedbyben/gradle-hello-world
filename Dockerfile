@@ -2,7 +2,7 @@ FROM openjdk:17-jdk-slim AS builder
 
 WORKDIR /source
 COPY . /source/
-RUN ./gradlew shadowJar
+RUN ls -l gradlew && ./gradlew shadowJar
 
 
 
