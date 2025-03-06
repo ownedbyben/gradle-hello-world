@@ -18,7 +18,7 @@ make the runnable jar executable then, use "java -jar gradle-hello-world-all.jar
 ```
 
 # 🛠️ Setup Instructions
-```
+
 ## Prerequisites
 
 Make sure you have the following installed:
@@ -41,8 +41,8 @@ cd gradle-hello-world/
 ## Run the Application
 ```
 after build the project a folder "build" created.
-- **cd build/libs*
-- **ls*
-- **java -jar app-<version>-all.jar*
+- *cd build/libs*
+- *ls*
+- *java -jar app-<version>-all.jar*
 ```
 
