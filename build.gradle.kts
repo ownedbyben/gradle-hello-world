@@ -24,6 +24,7 @@ application {
 
 tasks.withType<ShadowJar> {
     archiveFileName.set("app.jar")
+    destinationDirectory.set(file("${buildDir}/libs"))
     manifest {
         attributes("Main-Class" to "com.ido.HelloWorld")
     }
