@@ -15,7 +15,7 @@ plugins {
 
 group = "com.ido"
 description = "HelloWorld"
-version = "1.0.16"
+version = "1.0.17"
 
 
 application {
