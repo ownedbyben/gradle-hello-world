@@ -45,8 +45,8 @@ jobs:
 
     - name: Build Docker image using Multistage
       run: |
-        docker build -t ownedbyben/stage-app:$NEW_VERSION .
-        docker tag ownedbyben/stage-app:$NEW_VERSION ownedbyben/stage-app:latest
+        docker build -t ownedbyben/stage-app:${{ env.NEW_VERSION }} .
+        docker tag ownedbyben/stage-app:${{ env.NEW_VERSION }} ownedbyben/stage-app:latest
 
     - name: Log in to Docker Hub
       uses: docker/login-action@v3
@@ -56,11 +56,11 @@ jobs:
 
     - name: Push Docker image
       run: |
-        docker push ownedbyben/stage-app:$NEW_VERSION
+        docker push ownedbyben/stage-app:${{ env.NEW_VERSION }}
         docker push ownedbyben/stage-app:latest
 
 
     - name: Pull and run Docker image
       run: |
         docker pull ownedbyben/stage-app:latest
-        docker run --rm ownedbyben/stage-app:$NEW_VERSION
+        docker run --rm ownedbyben/stage-app:${{ env.NEW_VERSION }}
