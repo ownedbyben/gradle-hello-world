@@ -59,7 +59,6 @@ Make sure you have the following installed:
 
 - **Java 17**
 - **Gradle**
-- **Git**
 - **Docker**
 
 ## Clone the Repository
